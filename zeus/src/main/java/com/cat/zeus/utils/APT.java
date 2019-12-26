@@ -1,10 +1,11 @@
 package com.cat.zeus.utils;
 
-import com.org.zeus.annotation.Page;
+
+import com.cat.zeus.annotation.ZeusPage;
 
 public class APT {
     public static int getTitleBarLayoutByAnnotation(Class clazz) {
-        Page page = (Page) clazz.getAnnotation(Page.class);
+        ZeusPage page = (ZeusPage) clazz.getAnnotation(ZeusPage.class);
         if (page != null) {
             return page.titleBarLayout();
         }
@@ -12,7 +13,7 @@ public class APT {
     }
 
     public static int getLayoutByAnnotation(Class clazz) {
-        Page page = (Page) clazz.getAnnotation(Page.class);
+        ZeusPage page = (ZeusPage) clazz.getAnnotation(ZeusPage.class);
         if (page != null) {
             return page.layout();
         }
@@ -20,7 +21,7 @@ public class APT {
     }
 
     public static String getTitleTextByAnnotation(Class clazz) {
-        Page page = (Page) clazz.getAnnotation(Page.class);
+        ZeusPage page = (ZeusPage) clazz.getAnnotation(ZeusPage.class);
         if (null != page) {
             return page.title();
         }
