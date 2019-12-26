@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sogou.speech.base_lib">
+
+    <application>
+        <!--<activity-->
+            <!--android:name="com.org.zeus.page.ZeusActivity"-->
+            <!--android:configChanges="orientation|keyboardHidden|screenSize" />-->
+        <!--<activity-->
+            <!--android:name="com.org.zeus.page.ZeusActivity"-->
+            <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
+            <!--android:theme="@style/FullscreenTheme" />-->
+    </application>
+
+</manifest>
