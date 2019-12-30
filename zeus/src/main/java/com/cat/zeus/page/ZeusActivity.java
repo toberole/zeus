@@ -2,6 +2,7 @@ package com.cat.zeus.page;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cat.zeus.utils.APT;
 import com.sogou.speech.base_lib.R;
@@ -131,4 +133,29 @@ public abstract class ZeusActivity extends Activity {
         }
         return "";
     }
+
+    protected void toast(final String msg) {
+        if (!TextUtils.isEmpty(msg)) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(ZeusActivity.this, msg, Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }
+
+    protected void startPage(final Class<? extends Activity> clazz) {
+        if (null != clazz) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(ZeusActivity.this, clazz);
+                    ZeusActivity.this.startActivity(intent);
+                }
+            });
+        }
+    }
+
+
 }

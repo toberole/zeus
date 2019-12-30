@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.cat.zeus.utils.APT;
-import com.cat.zeus.utils.LogUtil;
+import com.cat.zeus.utils.ZeusLog;
 
 public class ZeusFragment extends Fragment {
     public static final String TAG = ZeusFragment.class.getSimpleName();
@@ -47,14 +47,14 @@ public class ZeusFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        LogUtil.i(TAG, "onAttach context: " + context);
+        ZeusLog.i(TAG, "onAttach context: " + context);
         this.activity = (Activity) context;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LogUtil.i(TAG, "onCreate");
+        ZeusLog.i(TAG, "onCreate");
     }
 
     @Nullable
@@ -69,49 +69,49 @@ public class ZeusFragment extends Fragment {
         if (0 != layout) {
             v = inflater.inflate(layout, container, false);
         }
-        LogUtil.i(TAG, "onCreateView");
+        ZeusLog.i(TAG, "onCreateView");
         return v;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        LogUtil.i(TAG, "onViewCreated");
+        ZeusLog.i(TAG, "onViewCreated");
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        LogUtil.i(TAG, "onStart");
+        ZeusLog.i(TAG, "onStart");
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        LogUtil.i(TAG, "onResume");
+        ZeusLog.i(TAG, "onResume");
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        LogUtil.i(TAG, "onPause");
+        ZeusLog.i(TAG, "onPause");
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        LogUtil.i(TAG, "onStop");
+        ZeusLog.i(TAG, "onStop");
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        LogUtil.i(TAG, "onDestroyView");
+        ZeusLog.i(TAG, "onDestroyView");
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        LogUtil.i(TAG, "onDestroy");
+        ZeusLog.i(TAG, "onDestroy");
     }
 }
